@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="144px" height="144px" viewBox="0 0 144 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <circle id="Oval" stroke="#111827" stroke-width="4" cx="72" cy="72" r="70"></circle>
+            <text id="V" font-family="Montserrat-Light, Montserrat" font-size="96" font-weight="300" letter-spacing="3.69230769" fill="#111827">
+                <tspan x="37" y="107">V</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

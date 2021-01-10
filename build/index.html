@@ -4,16 +4,237 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Tailwind CSS Demo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Vat Corp</title>
+
+    <style>
+      #menu-toggle:checked + #menu {
+        display: block;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
-  <body>
-    <div class="h-64">
-      <div class="p-4 m-4 bg-blue-600">
-        <h1 class="text-2xl font-bold text-white">Tailwind CSS Demo</h1>
+  <body
+    class="p-0 m-0"
+    style="font-family: 'Open Sans', sans-serif;"
+  >
+  <!-- container for fixed nav bar -->
+  <div class="fixed z-50 w-full top-0">
+    <header
+      class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 shadow-sm"
+    >
+      <div class="flex-1 flex justify-between items-center">
+        <a href="#">
+          <img
+            src="./images/vatLogo.svg"
+            width="32px"
+            height="32px"
+            alt="Vat Corp Logo"
+            style="float: left"
+          />
+          <h1 class="font-medium text-2xl ml-3" style="float: left">
+            <span class="py-2 md:py-3 border-b-2 border-transparent hover:border-red-400">Vat Corp</span>
+          </h1>
+        </a>
       </div>
-      <div class="p-4 m-4 bg-green-300 h-full">
-        <h2 class="text-green-900">Have much fun using Tailwind CSS</h2>
+
+      <label for="menu-toggle" class="cursor-pointer lg:hidden block"
+        ><svg
+          class="fill-current text-gray-900"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 20 20"
+        >
+          <title>menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </label>
+      <input class="hidden" type="checkbox" id="menu-toggle" />
+
+      <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+        <nav>
+          <ul
+            class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0"
+          >
+            <li>
+              <a
+                class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-blue-400"
+                href="#clients"
+                >Clients</a
+              >
+            </li>
+            <li>
+              <a
+                class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-green-400"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+    <!-- Tagline -->
+    <div class="p-6 md:px-14 md:py-12 mt-14">
+      <div class="bg-white">
+        <h2 class="text-center text-black text-4xl mb-8 md:mb-0 leading-tight">
+          Comprehensive Sales Tax Services
+        </h2>
+
+        <p class="md:p-6 p-0 font-body text-center text-xl leading-relaxed lg:w-10/12 xl:w-8/12" style="margin: 0 auto">
+          Creating plans for your business to comply with Canadian legislation
+          since 1991. We specialize in all Canadian sales taxes: GST, HST, QST and PST. We make decisions that will benefit you.
+        </p>
       </div>
     </div>
+
+    <!-- Cards-->
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap">
+        <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+          >
+            <div class="px-4 py-5 flex-auto">
+              <div
+                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+              >
+              <i class="material-icons" style="color: white">attach_money</i>
+              </div>
+              <h6 class="text-xl font-semibold">Tax Recovery</h6>
+              <p class="mt-2 mb-4 text-gray-600">
+                Reviews that have no fixed cost to the client and can result in substantial cost recoveries.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-4/12 px-4 text-center">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+          >
+            <div class="px-4 py-5 flex-auto">
+              <div
+                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400"
+              >
+                <i class="material-icons" style="color: white">gavel</i>
+              </div>
+              <h6 class="text-xl font-semibold">Audit Representation</h6>
+              <p class="mt-2 mb-4 text-gray-600">
+                Filing objections, negotiations and recommending advancement to court. Before, during and upon completion.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="md:pt-6 pt-0 w-full md:w-4/12 px-4 text-center">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+          >
+            <div class="px-4 py-5 flex-auto">
+              <div
+                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+              >
+              <i class="material-icons" style="color: white">groups</i>
+                          </div>
+              <h6 class="text-xl font-semibold">Advisory Services</h6>
+              <p class="mt-2 mb-4 text-gray-600">
+                Ongoing support to manage complience and client needs. Employee tax training and return administration.
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <!-- link box -->
+    <div class="p-1 m-1" id="clients">
+    </div>
+    
+    <!-- Client Tagline -->
+    <div class="p-6 md:px-14 md:py-12 mt-12">
+      <div class="bg-white">
+        <h2 class="text-center text-black text-4xl mb-8 md:mb-0 leading-tight">
+          Our Clients
+        </h2>
+        
+        <p class="md:p-6 p-0 font-body text-center text-xl leading-relaxed lg:w-10/12" style="margin: 0 auto">
+          We work with top companies all over North America, saving over $100 million and counting.
+        </p>
+      </div>
+    </div>
+  
+    <!-- logos -->
+    <div class="flex align-center justify-center mx-6 lg:mx-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 mb-12">
+        <div class="flex mx-8 md:mx-14 m-4 h-24 w-24">
+          <img src="./images/cibc.png" alt="CIBC Logo" />
+        </div>
+        <div class="flex mx-8 md:mx-14 m-4 h-24 w-24">
+          <img src="./images/mapleLeaf.png" alt="Maple Leaf Logo" />
+        </div>
+        <div class="flex mx-8 md:mx-14 m-4 h-24 w-24">
+          <img src="./images/hh.png" alt="Home Hardware Logo" />
+        </div>
+        <div class="flex mx-8 md:mx-14 m-4 h-24 w-24">
+          <img src="./images/itg.png" alt="ITG Logo" />
+        </div>
+        <div class="flex mx-8 md:mx-14 m-4 h-24 w-24">
+          <img src="./images/canadaBread.png" alt="Canada Bread Logo" />
+        </div>
+        <div class="flex mx-8 md:mx-14 m-4 h-24 w-24">
+          <img src="./images/schneiders.jpg" alt="Schneiders Logo" />
+        </div>
+        <div class="flex mx-8 md:mx-14 m-4 h-24 w-24">
+          <img src="./images/aetna.png" alt="Aetna Logo" />
+        </div>
+        <div class="flex mx-8 md:mx-14 m-4 h-24 w-24">
+          <img src="./images/mc.jpg" alt="McCormick Logo" />
+        </div>
+      </div>
+    </div>
+
+     <!-- link box -->
+     <div class="p-1 m-1" id="contact">
+    </div>
+
+     <!-- Contact Tagline -->
+     <div class="p-6 md:px-14 md:py-12 mt-10">
+      <div class="bg-white">
+        <h2 class="text-center text-black text-4xl mb-8 md:mb-0 leading-tight">
+          Contact Us
+        </h2>
+        
+        <p class="md:p-6 p-0 font-body text-center text-xl leading-relaxed lg:w-10/12" style="margin: 0 auto">
+          We reply to all inquiries as soon as possible. Please allow up to 48 hours for a reply. Thank you.
+        </p>
+      </div>
+
+      <!-- email-->
+      <div class="px-4 py-5 flex justify-center my-2">
+        <a class="flex items-center" href="mailto:aris@vat-corp.com">
+          <div
+            class="text-white p-3 w-12 h-12 shadow-lg rounded-full bg-blue-400"
+          >
+            <i class="material-icons" style="color: white">email</i>
+          </div>
+          <h6 class="text-xl font-semibold px-4">Aris@vat-corp.com</h6> 
+        </a>
+    </div>
+    
+    <!-- Footer -->
+    <div class="mt-48 text-center font-light">
+      <p>Vat-corp 2020. All rights reserved.</p>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+
   </body>
 </html>
